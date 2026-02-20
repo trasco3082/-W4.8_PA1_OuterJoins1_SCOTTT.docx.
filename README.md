@@ -1,0 +1,1 @@
+# -W4.8_PA1_OuterJoins1_SCOTTT.docx.
