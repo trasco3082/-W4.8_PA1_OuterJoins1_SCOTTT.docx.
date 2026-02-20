@@ -1,0 +1,76 @@
+TRACEY SCOTT
+SQL250
+ASSIGNEMT 4.8PA SCREEN SHOTS
+02/19/206
+
+--QUERY1
+
+SELECT a.department_name, 
+       b.first_name, 
+       b.last_name 
+FROM L_DEPARTMENTS a,
+     L_EMPLOYEES b 
+WHERE a.dept_code = b.dept_code;
+
+--QUERY1B
+
+SELECT a.department_name, 
+       b.first_name, 
+       b.last_name 
+FROM L_DEPARTMENTS a 
+     LEFT OUTER JOIN L_EMPLOYEES b 
+        ON a.dept_code = b.dept_code;
+
+
+--QUERY2
+
+SELECT a.department_name,
+       b.first_name,
+       b.last_name 
+FROM L_EMPLOYEES b, 
+     L_DEPARTMENTS a 
+WHERE a.dept_code = b.dept_code;
+
+
+--QUERY2B
+
+SELECT a.department_name,
+       b.first_name,
+        b.last_name 
+FROM L_EMPLOYEES b 
+     RIGHT OUTER JOIN L_DEPARTMENTS a 
+        ON a.dept_code = b.dept_code;
+
+--QUERY3
+
+SELECT a.department_name,
+       b.first_name,
+        b.last_name 
+FROM L_EMPLOYEES b 
+     RIGHT OUTER JOIN L_DEPARTMENTS a 
+        ON a.dept_code = b.dept_code;
+
+--QUERY3B
+
+SELECT a.department_name, 
+       b.first_name,
+       b.last_name 
+FROM L_DEPARTMENTS a 
+     FULL OUTER JOIN sec1405_employees b 
+        ON a.dept_code = b.dept_code;
+
+--QUERY
+
+SELECT dept_code, 
+       department_name 
+FROM L_DEPARTMENTS 
+
+UNION 
+
+SELECT dept_code, 
+       department_name 
+FROM sec1407_departments;
+        
+
+
+
